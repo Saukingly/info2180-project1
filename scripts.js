@@ -4,12 +4,15 @@ document.addEventListener("DOMContentLoaded", function() {
     const email = document.getElementById("email");
     const message = document.querySelector(".message");
 
+    form.noValidate = true;
+
     form.addEventListener("submit", function(event) {
         message.classList.remove("correct");
         event.preventDefault();
         const emailValue = email.value.trim();
+        const looksValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailValue);
 
-        if (emailValue === "" || !(emailValue.includes("@"))) {
+        if (!looksValid) {
             message.textContent = "Please enter a valid email address.";
         } else {
             message.classList.add("correct");
