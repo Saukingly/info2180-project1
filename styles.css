@@ -140,10 +140,8 @@ img {
 .cta a:hover {
     background-color: #ffffff;
     color: #48BB78;
-    border-left: 10px solid #ffffff;
-    border-right: 10px solid #ffffff;
-    border-top: 4px solid #ffffff;
-    border-bottom: 4px solid #ffffff;
+    padding: 10px 24px;
+    border-radius: 5px;
 }
 
 .stories h2 {
